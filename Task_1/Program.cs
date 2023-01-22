@@ -5,12 +5,14 @@
 
 
 Console.WriteLine("Введите число");
-int N =  Convert.ToInt32(Console.ReadLine());
+int number =  Convert.ToInt32(Console.ReadLine());
 
-// int N = 5;
-int index = N;
-while (index > 0)
+void NumberCounter(int number)
 {
-    Console.WriteLine(index);
-    index = index - 1;
+    if (number <= 0) return;
+    Console.WriteLine(number);
+    NumberCounter (number - 1);
+    
 }
+
+NumberCounter(number);
